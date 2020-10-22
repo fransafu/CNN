@@ -1,0 +1,8 @@
+# Python cache modules
+__pycache__/
+
+# Local config for VSCode
+.vscode/
+
+# Local virtualenvironment
+env/
