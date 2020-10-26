@@ -6,3 +6,6 @@ __pycache__/
 
 # Local virtualenvironment
 env/
+
+# OS MAC Files
+.DS_Store
