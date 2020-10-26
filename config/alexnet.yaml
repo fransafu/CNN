@@ -6,13 +6,13 @@ num_threads: 8
 dataset_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset/clothing-small
 
 # Images description
-image_type: 'SKETCH'
+image_type: 'image'
 channels: 3
 image_width: 224
 image_height: 224
 
 # Model
-num_epochs: 3 # 10 # 20
+num_epochs: 4 # 10 # 20
 num_classes: 19 # 19
 batch_size: 256 # 256 # 64
 validation_steps: 50 # 100
@@ -21,9 +21,10 @@ use_l2: True
 weight_decay: 1e-4
 shuffle_size: 10000
 optimizer_name: 'adam'
+history_path: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/snapshots/
 
 # Snapshot
 snapshot_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/snapshots/
 snapshot_steps: 500
-checkpoint_file: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/snapshots/snapfile.h5
-use_checkpoint: False
+checkpoint_file: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/snapshots/002.h5
+use_checkpoint: True
