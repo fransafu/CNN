@@ -1,20 +1,14 @@
 import argparse
 import os
 from pathlib import Path
-import pickle
 from datetime import datetime
 
 import numpy as np
 import tensorflow as tf
-from tensorflow.python.keras.callbacks import History
 
 from TFRecord import TFRecord
-from Dataset import Dataset
 from Config import Config
 import losses
-
-import models.resnet as resnet
-from models.alexnet import AlexNetModel
 
 def read_arguments():
     parser = argparse.ArgumentParser(description = "Entrena un modelo especificado")
