@@ -3,13 +3,12 @@ import os
 from pathlib import Path
 import pickle
 from datetime import datetime
+from zipfile import ZipFile
 
 import numpy as np
 import tensorflow as tf
-from tensorflow.python.keras.callbacks import History
 
 from TFRecord import TFRecord
-from Dataset import Dataset
 from Config import Config
 import losses
 
@@ -55,8 +54,19 @@ def save_history(history_filename, history):
     with open(history_filename, 'wb') as file_pi:
         pickle.dump(history.history, file_pi)
 
+def consolidate_experiment(now, model_path, history_path, config_path):
+    name_zipfile = f"{now.strftime('%d_%m_%Y__%H_%M_%S')}.zip"
+
+    with ZipFile(name_zipfile, 'w') as myzip:
+        myzip.write(model_path)
+        myzip.write(history_path)
+        myzip.write(config_path)
+
 def main():
     pargs = read_arguments()
+
+    now = datetime.now()
+
     model_name = pargs.model
 
     config = Config()
@@ -160,11 +170,15 @@ def main():
         )
 
         # Save history
-        save_history(f"{model_name}_history", history)
+        save_history_to = f"{now.strftime('%d_%m_%Y__%H_%M_%S')}_{model_name}_history"
+        save_history(save_history_to, history)
 
         # Save de model
-        model.save(f"{model_name}_model")
+        save_model_to = f"{now.strftime('%d_%m_%Y__%H_%M_%S')}_{model_name}_model.h5"
+        model.save(save_model_to)
         print("model saved")
+
+        consolidate_experiment(now, save_model_to, save_history_to, config)
 
 if __name__ == "__main__":
     main()
