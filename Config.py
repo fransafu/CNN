@@ -26,6 +26,7 @@ class Config(YamlDataClassConfig):
     learning_rate: float = None
     use_l2: bool = None
     weight_decay: float = None
+    decay_steps: int = None
     shuffle_size: int = None
     optimizer_name: str = None
     history_path: str = None
