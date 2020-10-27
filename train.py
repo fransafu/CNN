@@ -62,6 +62,7 @@ def consolidate_experiment(now, model_path, history_path, config_path):
         myzip.write(history_path)
         myzip.write(config_path)
 
+
 def main():
     pargs = read_arguments()
 
@@ -156,7 +157,7 @@ def main():
             # Definin optimizer, my experince shows that SGD + cosine decay is a good starting point        
             # Recommended learning_rate is 0.1, and decay_steps = total_number_of_steps                        
             lr_schedule = tf.keras.experimental.CosineDecay(initial_learning_rate = config.learning_rate,
-                                                            decay_steps = config.weight_decay,
+                                                            decay_steps = config.decay_steps,
                                                             alpha = 0.0001)
             opt = tf.keras.optimizers.SGD(learning_rate = lr_schedule, momentum = 0.9, nesterov = True)        
 
@@ -174,11 +175,11 @@ def main():
         save_history(save_history_to, history)
 
         # Save de model
-        save_model_to = f"{now.strftime('%d_%m_%Y__%H_%M_%S')}_{model_name}_model.h5"
+        save_model_to = f"{now.strftime('%d_%m_%Y__%H_%M_%S')}_{model_name}_model"
         model.save(save_model_to)
         print("model saved")
 
-        consolidate_experiment(now, save_model_to, save_history_to, config)
+        consolidate_experiment(now, save_model_to, save_history_to, pargs.config)
 
 if __name__ == "__main__":
     main()
