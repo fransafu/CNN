@@ -17,7 +17,7 @@ num_classes: 19
 batch_size: 128
 validation_steps: 14 # (dataset_test // batch_size)
 use_imagenet_weights: True
-imagenet_dir: /content/imagenet_045.h5
+imagenet_dir: /content/resnet_imagenet_045.h5
 
 learning_rate: 0.1
 use_l2: True

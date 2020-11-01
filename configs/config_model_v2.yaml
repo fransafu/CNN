@@ -1,4 +1,5 @@
 # General
+basepath_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1
 use_multithreads: True
 num_threads: 6
 
@@ -18,7 +19,7 @@ batch_size: 128
 validation_steps: 14
 learning_rate: 0.01
 use_imagenet_weights: True
-imagenet_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/imagenet_045.h5
+imagenet_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/weights/resnet_imagenet_045.h5
 
 use_l2: True
 weight_decay: 1600
