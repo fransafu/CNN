@@ -9,3 +9,6 @@ env/
 
 # OS MAC Files
 .DS_Store
+
+# Ignore local dataset
+dataset/*[.tfrecords, .npy, .dat, .zip, .txt]
