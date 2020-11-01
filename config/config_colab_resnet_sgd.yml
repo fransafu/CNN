@@ -16,6 +16,8 @@ num_epochs: 20
 num_classes: 19
 batch_size: 64
 validation_steps: 29 # (dataset_test // batch_size)
+use_imagenet_weights: False
+imagenet_dir: /content/imagenet_045.h5
 
 learning_rate: 0.1
 use_l2: True

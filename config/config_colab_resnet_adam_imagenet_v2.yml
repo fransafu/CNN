@@ -12,19 +12,19 @@ image_width: 224
 image_height: 224
 
 # Model
-num_epochs: 20
+num_epochs: 50
 num_classes: 19
-batch_size: 64
-validation_steps: 29 # (dataset_test // batch_size)
-use_imagenet_weights: False
+batch_size: 128
+validation_steps: 14 # (dataset_test // batch_size)
+use_imagenet_weights: True
 imagenet_dir: /content/imagenet_045.h5
 
-learning_rate: 0.1
+learning_rate: 0.01
 use_l2: True
 weight_decay: 1e-4
-decay_steps: 10000 # (dataset_train / batch_size) * epoch
-shuffle_size: 10000
-optimizer_name: 'sgd'
+decay_steps: 5000 # (dataset_train / batch_size) * epoch
+shuffle_size: 5000
+optimizer_name: 'adam'
 history_path: /content/snapshots/
 
 # Snapshot

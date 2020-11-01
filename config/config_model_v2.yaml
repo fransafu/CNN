@@ -3,7 +3,7 @@ use_multithreads: True
 num_threads: 6
 
 # Dataset
-dataset_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset/clothing-small
+dataset_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset
 
 # Images description
 image_type: 'image'
@@ -14,12 +14,15 @@ image_height: 224
 # Model
 num_epochs: 20
 num_classes: 19
-batch_size: 64
-validation_steps: 100
-learning_rate: 0.001
+batch_size: 128
+validation_steps: 14
+learning_rate: 0.01
+use_imagenet_weights: True
+imagenet_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/imagenet_045.h5
+
 use_l2: True
-weight_decay: 1e-4
-shuffle_size: 10000
+weight_decay: 1600
+shuffle_size: 5000
 optimizer_name: 'adam'
 
 # Snapshot
