@@ -5,7 +5,7 @@ import skimage.io as io
 import skimage.color as color
 import skimage.transform as transf
 
-import imgproc as imgproc
+import infrastructure.imgproc as imgproc
 
 class Image:
     """ Helpers Images """

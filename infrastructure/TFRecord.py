@@ -1,13 +1,13 @@
 import os
-from File import File
+from infrastructure.File import File
 import sys
 import numpy as np
 import tensorflow as tf
 import threading
 from datetime import datetime
 
-from Image import Image
-import imgproc as imgproc
+from infrastructure.Image import Image
+import infrastructure.imgproc as imgproc
 
 
 class TFRecord:

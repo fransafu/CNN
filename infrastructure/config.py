@@ -1,11 +1,15 @@
-from dataclasses import dataclass
+import os
 
+from dataclasses import dataclass
 from yamldataclassconfig.config import YamlDataClassConfig
+
+from infrastructure.errors import IncorrectBasePathDir
 
 
 @dataclass
 class Config(YamlDataClassConfig):
     # General
+    basepath_dir: str = None
     use_multithreads: bool = False
     num_threads: int = None
 
@@ -30,9 +34,17 @@ class Config(YamlDataClassConfig):
     shuffle_size: int = None
     optimizer_name: str = None
     history_path: str = None
+    use_imagenet_weights: bool = None
+    imagenet_dir: str = None
 
     # Snapshot
     snapshot_dir: str = None
     snapshot_steps: int = None
     checkpoint_file: str = None
     use_checkpoint: bool = False
+
+    def isValid(self) -> bool:
+        relative_path = os.path.realpath(__file__)
+        relative_path = relative_path.replace('/infrastructure/config.py', '')
+        if self.basepath_dir != relative_path:
+            raise IncorrectBasePathDir()
