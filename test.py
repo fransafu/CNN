@@ -7,8 +7,8 @@ import numpy as np
 import tensorflow as tf
 
 from TFRecord import TFRecord
-from Config import Config
-import losses
+from infrastructure.config import Config
+from infrastructure import losses
 
 def read_arguments():
     parser = argparse.ArgumentParser(description = "Entrena un modelo especificado")
