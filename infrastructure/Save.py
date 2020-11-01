@@ -3,18 +3,6 @@ from zipfile import ZipFile, ZIP_DEFLATED
 from datetime import datetime
 import pickle
 
-class Zip:
-    def __init__(self, basepath_store, zip_filename) -> None:
-        self.zipfile = ZipFile(f"{basepath_store}/{zip_filename}", 'w', ZIP_DEFLATED)
-
-    def zipfile(self, filepath) -> None:
-        self.zipfile.write(filepath)
-
-    def zipdir(self, path) -> None:
-        for root, _, files in os.walk(path):
-            for file in files:
-                self.zipfile.write(os.path.join(root, file))
-
 class Save:
     def __init__(self, config) -> None:
         self.config = config
@@ -32,8 +20,11 @@ class Save:
 
         history_filename = self.__save_history(history, model_filename)
 
-        zipfile = Zip(self.basepath_experiment, name_zipfile)
-        zipfile.zipdir(model_filename)
-        zipfile.zipfile(history_filename)
-        zipfile.zipfile(config_filepath)
-        zipfile.close()
+        print("Guardando experimento")
+        print(f"{self.basepath_experiment}/{name_zipfile}")
+        with ZipFile(f"{self.basepath_experiment}/{name_zipfile}", 'w', ZIP_DEFLATED) as zipfile:
+            for root, _, files in os.walk(model_filename):
+                for file in files:
+                    zipfile.write(os.path.join(root, file))
+            zipfile.write(history_filename)
+            zipfile.write(config_filepath)
