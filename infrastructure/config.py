@@ -48,3 +48,6 @@ class Config(YamlDataClassConfig):
         relative_path = relative_path.replace('/infrastructure/config.py', '')
         if self.basepath_dir != relative_path:
             raise IncorrectBasePathDir()
+
+    def set_dataset_dir(self, path):
+        self.dataset_dir = path

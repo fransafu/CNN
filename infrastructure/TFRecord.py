@@ -29,7 +29,7 @@ class TFRecord:
         return tf.train.Feature(int64_list=tf.train.Int64List(value=[value]))
 
     @staticmethod
-    def create_from_file(filenames, labels, image_shape, tfr_filename, process_function = imgproc.resize_image):    
+    def create_from_file(data_dir, filenames, labels, image_shape, tfr_filename, process_function = imgproc.resize_image):    
         # Create tf-records
         writer = tf.io.TFRecordWriter(tfr_filename)
         print("tfr_filename: ", tfr_filename)
@@ -41,10 +41,7 @@ class TFRecord:
             try :
                 if i % 500 == 0 or (i + 1) == len(filenames):
                     print("---{}".format(i))
-                print("filenames: ", filenames[i])
-                print("image_shape: ", image_shape[2])
-                print(f"/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset/clothing-small/{filenames[i]}")
-                image = Image.read_image(f"/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset/clothing-small/{filenames[i]}", image_shape[2]) #scikit-image
+                image = Image.read_image(f"{data_dir}/dataset/{filenames[i]}", image_shape[2]) #scikit-image
                 image = process_function(image, (image_shape[0], image_shape[1]))
                 #print(image)
                 #cv2.imshow("image", image)
@@ -68,7 +65,7 @@ class TFRecord:
         return mean_image
 
     @staticmethod
-    def process_batch_threads(thr_index, ranges, filenames, labels, image_shape, tfr_filename, process_function = imgproc.resize_image):    
+    def process_batch_threads(thr_index, ranges, data_dir, filenames, labels, image_shape, tfr_filename, process_function = imgproc.resize_image):    
         #create tf-records    
         tfr_filename_batch = '{}_{}.tfrecords'.format(tfr_filename, thr_index)
         mean_filename_batch = '{}_{}_mean.npy'.format(tfr_filename, thr_index)    
@@ -80,8 +77,8 @@ class TFRecord:
         batch_size = ranges[thr_index][1] - ranges[thr_index][0]
         count = 0
         for idx in np.arange(ranges[thr_index][0], ranges[thr_index][1]) :   
-            try :
-                image = Image.read_image(f"/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset/clothing-small/{filenames[idx]}", image_shape[2]) #scikit-image
+            try:
+                image = Image.read_image(f"{data_dir}/{filenames[idx]}", image_shape[2]) #scikit-image
                 image = process_function(image, (image_shape[0], image_shape[1]))                            
                 feature = {
                     'image': TFRecord._bytes_feature(tf.compat.as_bytes(image.tostring())),
@@ -104,7 +101,7 @@ class TFRecord:
         sys.stdout.flush()
 
     @staticmethod
-    def create_tfrecords_threads(filenames, labels, image_shape, tfr_filename, process_function, n_threads):
+    def create_tfrecords_threads(data_dir, filenames, labels, image_shape, tfr_filename, process_function, n_threads):
         assert len(filenames) == len(labels) 
         #break whole dataset int batches according to the number of threads
         spacing = np.linspace(0, len(filenames), n_threads + 1).astype(np.int)
@@ -117,7 +114,7 @@ class TFRecord:
         sys.stdout.flush()
         threads = []
         for thr_index in np.arange(len(ranges)):
-            args = (thr_index, ranges, filenames, labels, image_shape, tfr_filename, process_function)
+            args = (thr_index, ranges, data_dir, filenames, labels, image_shape, tfr_filename, process_function)
             t = threading.Thread(target = TFRecord.process_batch_threads, args=args)
             t.start()
             threads.append(t)         
@@ -153,7 +150,7 @@ class TFRecord:
             filenames, labels = File.read_data_from_file(data_dir, dataset = 'train', shuf = True)
             if config.use_multithreads:
                 tfr_filename = os.path.join(data_dir, 'train')
-                training_mean = TFRecord.create_tfrecords_threads(filenames, labels, image_shape, tfr_filename, processFun, n_threads)
+                training_mean = TFRecord.create_tfrecords_threads(data_dir, filenames, labels, image_shape, tfr_filename, processFun, n_threads)
             else:        
                 tfr_filename = os.path.join(data_dir, 'train.tfrecords')            
                 training_mean = TFRecord.create_from_file(filenames, labels, image_shape, tfr_filename, processFun)
@@ -176,7 +173,7 @@ class TFRecord:
                 TFRecord.create_tfrecords_threads(filenames, labels, image_shape, tfr_filename, processFun, n_threads)
             else :    
                 tfr_filename = os.path.join(data_dir, "test.tfrecords")
-                TFRecord.create_from_file(filenames, labels, image_shape, tfr_filename, processFun)
+                TFRecord.create_from_file(data_dir, filenames, labels, image_shape, tfr_filename, processFun)
             print("test_record saved at {}.".format(tfr_filename))    
 
     @staticmethod
