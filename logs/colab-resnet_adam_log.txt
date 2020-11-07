@@ -1,0 +1,199 @@
+2020-11-01 20:44:12.207257: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-11-01 20:44:16.951018: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2020-11-01 20:44:16.969207: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-01 20:44:16.969906: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:00:04.0 name: Tesla T4 computeCapability: 7.5
+coreClock: 1.59GHz coreCount: 40 deviceMemorySize: 14.73GiB deviceMemoryBandwidth: 298.08GiB/s
+2020-11-01 20:44:16.969970: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-11-01 20:44:16.993584: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2020-11-01 20:44:17.050589: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2020-11-01 20:44:17.092992: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2020-11-01 20:44:17.116232: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2020-11-01 20:44:17.129633: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2020-11-01 20:44:17.303890: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2020-11-01 20:44:17.304081: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-01 20:44:17.304792: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-01 20:44:17.305525: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2020-11-01 20:44:17.332998: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2200000000 Hz
+2020-11-01 20:44:17.333298: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1cd6bc0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-01 20:44:17.333331: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-11-01 20:44:17.508453: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-01 20:44:17.509106: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1cd6a00 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-11-01 20:44:17.509147: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2020-11-01 20:44:17.509380: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-01 20:44:17.509955: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:00:04.0 name: Tesla T4 computeCapability: 7.5
+coreClock: 1.59GHz coreCount: 40 deviceMemorySize: 14.73GiB deviceMemoryBandwidth: 298.08GiB/s
+2020-11-01 20:44:17.509998: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-11-01 20:44:17.510057: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2020-11-01 20:44:17.510083: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2020-11-01 20:44:17.510119: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2020-11-01 20:44:17.510157: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2020-11-01 20:44:17.510180: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2020-11-01 20:44:17.510200: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2020-11-01 20:44:17.510284: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-01 20:44:17.510857: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-01 20:44:17.511347: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2020-11-01 20:44:17.513120: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-11-01 20:44:21.325811: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-01 20:44:21.325877: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 
+2020-11-01 20:44:21.325893: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N 
+2020-11-01 20:44:21.326262: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-01 20:44:21.326894: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:982] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-01 20:44:21.327448: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:39] Overriding allow_growth setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2020-11-01 20:44:21.327508: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 13277 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+Model: "res_net"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+backbone (ResNetBackbone)    (None, 7, 7, 512)         21298112  
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 512)               0         
+_________________________________________________________________
+classifier (Dense)           (None, 19)                9747      
+=================================================================
+Total params: 21,307,859
+Trainable params: 21,292,627
+Non-trainable params: 15,232
+_________________________________________________________________
+Epoch 1/20
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/data/ops/multi_device_iterator_ops.py:601: get_next_as_optional (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Iterator.get_next_as_optional()` instead.
+2020-11-01 20:44:32.352865: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2020-11-01 20:44:43.830770: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2415 of 10000
+2020-11-01 20:44:53.830278: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 4820 of 10000
+2020-11-01 20:45:03.830661: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7224 of 10000
+2020-11-01 20:45:13.830909: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 9630 of 10000
+2020-11-01 20:45:15.344923: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+2020-11-01 20:45:15.636121: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+500/500 [==============================] - 165s 330ms/step - loss: 2.7494 - accuracy: 0.1331 - val_loss: 2.7723 - val_accuracy: 0.1374
+Epoch 2/20
+2020-11-01 20:48:18.206027: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2406 of 10000
+2020-11-01 20:48:28.206964: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 4811 of 10000
+2020-11-01 20:48:38.207145: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7217 of 10000
+2020-11-01 20:48:48.207475: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 9621 of 10000
+2020-11-01 20:48:49.722608: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 166s 331ms/step - loss: 2.5265 - accuracy: 0.1793 - val_loss: 3.4890 - val_accuracy: 0.0997
+Epoch 3/20
+2020-11-01 20:51:46.182516: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2408 of 10000
+2020-11-01 20:51:56.181990: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 4813 of 10000
+2020-11-01 20:52:06.182300: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7219 of 10000
+2020-11-01 20:52:16.182527: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 9627 of 10000
+2020-11-01 20:52:17.696221: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 163s 325ms/step - loss: 2.2608 - accuracy: 0.2587 - val_loss: 2.2755 - val_accuracy: 0.2953
+Epoch 4/20
+2020-11-01 20:55:10.766807: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2408 of 10000
+2020-11-01 20:55:20.766100: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 4813 of 10000
+2020-11-01 20:55:30.766614: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7217 of 10000
+2020-11-01 20:55:40.767341: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 9604 of 10000
+2020-11-01 20:55:42.377910: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 164s 328ms/step - loss: 1.9698 - accuracy: 0.3417 - val_loss: 2.6556 - val_accuracy: 0.2834
+Epoch 5/20
+2020-11-01 20:58:37.287638: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 3031 of 10000
+2020-11-01 20:58:47.287194: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5576 of 10000
+2020-11-01 20:58:57.294419: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 8018 of 10000
+2020-11-01 20:59:05.496894: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 161s 323ms/step - loss: 1.8213 - accuracy: 0.3828 - val_loss: 2.0063 - val_accuracy: 0.3502
+Epoch 6/20
+2020-11-01 21:01:57.310718: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 3017 of 10000
+2020-11-01 21:02:07.310201: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5539 of 10000
+2020-11-01 21:02:17.311205: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7947 of 10000
+2020-11-01 21:02:25.829237: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 163s 327ms/step - loss: 1.7071 - accuracy: 0.4264 - val_loss: 1.7767 - val_accuracy: 0.4203
+Epoch 7/20
+2020-11-01 21:05:19.654468: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2789 of 10000
+2020-11-01 21:05:29.615365: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5453 of 10000
+2020-11-01 21:05:39.615503: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 8004 of 10000
+2020-11-01 21:05:47.715352: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 160s 320ms/step - loss: 1.6180 - accuracy: 0.4530 - val_loss: 1.7357 - val_accuracy: 0.4197
+Epoch 8/20
+2020-11-01 21:08:38.566819: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2605 of 10000
+2020-11-01 21:08:48.566592: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5052 of 10000
+2020-11-01 21:08:58.565368: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7459 of 10000
+2020-11-01 21:09:08.073534: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 160s 320ms/step - loss: 1.5333 - accuracy: 0.4853 - val_loss: 1.5950 - val_accuracy: 0.4838
+Epoch 9/20
+2020-11-01 21:11:58.494635: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 3002 of 10000
+2020-11-01 21:12:08.494838: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5616 of 10000
+2020-11-01 21:12:18.494477: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 8338 of 10000
+2020-11-01 21:12:24.714886: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 160s 320ms/step - loss: 1.4730 - accuracy: 0.5058 - val_loss: 1.5743 - val_accuracy: 0.4855
+Epoch 10/20
+2020-11-01 21:15:15.094546: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2674 of 10000
+2020-11-01 21:15:25.093594: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5417 of 10000
+2020-11-01 21:15:35.095352: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 8008 of 10000
+2020-11-01 21:15:43.017683: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 159s 318ms/step - loss: 1.4107 - accuracy: 0.5294 - val_loss: 1.5995 - val_accuracy: 0.4758
+Epoch 11/20
+2020-11-01 21:18:32.854358: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2500 of 10000
+2020-11-01 21:18:42.847434: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 4905 of 10000
+2020-11-01 21:18:52.894697: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7503 of 10000
+2020-11-01 21:19:01.993379: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 157s 314ms/step - loss: 1.3585 - accuracy: 0.5451 - val_loss: 1.5124 - val_accuracy: 0.5269
+Epoch 12/20
+2020-11-01 21:21:49.830737: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2748 of 10000
+2020-11-01 21:21:59.822591: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5201 of 10000
+2020-11-01 21:22:09.822515: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7736 of 10000
+2020-11-01 21:22:18.935234: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 160s 321ms/step - loss: 1.3010 - accuracy: 0.5633 - val_loss: 1.5894 - val_accuracy: 0.4935
+Epoch 13/20
+2020-11-01 21:25:10.006486: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2575 of 10000
+2020-11-01 21:25:20.006319: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5360 of 10000
+2020-11-01 21:25:29.976031: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7943 of 10000
+2020-11-01 21:25:37.807184: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 159s 319ms/step - loss: 1.2640 - accuracy: 0.5763 - val_loss: 1.4371 - val_accuracy: 0.5172
+Epoch 14/20
+2020-11-01 21:28:27.607182: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2594 of 10000
+2020-11-01 21:28:37.598152: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5395 of 10000
+2020-11-01 21:28:47.595277: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 8314 of 10000
+2020-11-01 21:28:53.705542: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 161s 322ms/step - loss: 1.2108 - accuracy: 0.5969 - val_loss: 1.5208 - val_accuracy: 0.5496
+Epoch 15/20
+2020-11-01 21:31:45.439592: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2511 of 10000
+2020-11-01 21:31:55.410525: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5207 of 10000
+2020-11-01 21:32:05.411152: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7842 of 10000
+2020-11-01 21:32:14.114381: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 159s 318ms/step - loss: 1.1672 - accuracy: 0.6086 - val_loss: 1.6735 - val_accuracy: 0.4984
+Epoch 16/20
+2020-11-01 21:35:03.490732: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2467 of 10000
+2020-11-01 21:35:13.494504: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 4874 of 10000
+2020-11-01 21:35:23.494071: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7585 of 10000
+2020-11-01 21:35:31.896789: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 159s 318ms/step - loss: 1.1343 - accuracy: 0.6172 - val_loss: 1.4535 - val_accuracy: 0.5544
+Epoch 17/20
+2020-11-01 21:38:21.134338: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2565 of 10000
+2020-11-01 21:38:31.182474: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 5174 of 10000
+2020-11-01 21:38:41.108625: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7779 of 10000
+2020-11-01 21:38:49.988911: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 160s 320ms/step - loss: 1.0794 - accuracy: 0.6360 - val_loss: 1.3914 - val_accuracy: 0.5625
+Epoch 18/20
+2020-11-01 21:41:40.807573: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2408 of 10000
+2020-11-01 21:41:50.807991: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 4951 of 10000
+2020-11-01 21:42:00.807856: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7356 of 10000
+2020-11-01 21:42:10.808704: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 9762 of 10000
+2020-11-01 21:42:11.748031: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 161s 323ms/step - loss: 1.0478 - accuracy: 0.6468 - val_loss: 1.4307 - val_accuracy: 0.5770
+Epoch 19/20
+2020-11-01 21:45:03.727080: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2408 of 10000
+2020-11-01 21:45:13.726094: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 4813 of 10000
+2020-11-01 21:45:23.726166: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7219 of 10000
+2020-11-01 21:45:33.728667: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 9613 of 10000
+2020-11-01 21:45:35.332659: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 161s 321ms/step - loss: 1.0032 - accuracy: 0.6627 - val_loss: 1.4237 - val_accuracy: 0.5927
+Epoch 20/20
+2020-11-01 21:48:26.625800: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 2408 of 10000
+2020-11-01 21:48:36.622267: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 4813 of 10000
+2020-11-01 21:48:46.622278: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 7219 of 10000
+2020-11-01 21:48:56.622831: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:172] Filling up shuffle buffer (this may take a while): 9627 of 10000
+2020-11-01 21:48:58.147362: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:221] Shuffle buffer filled.
+500/500 [==============================] - 161s 321ms/step - loss: 0.9571 - accuracy: 0.6762 - val_loss: 1.3914 - val_accuracy: 0.5770
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2020-11-01 21:51:47.765748: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+Guardando experimento
+/content/experiments/01112020215156_resnet_model.zip

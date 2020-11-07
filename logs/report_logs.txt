@@ -1,0 +1,155 @@
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020183345_alexnet_model/01112020183345_alexnet_model_history
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020183345_alexnet_model/alexnet_model
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020183345_alexnet_model/content/config_colab_alexnet_adam.yml
+Config(FILE_PATH=PosixPath('/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/config.yml'), basepath_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/', use_multithreads=True, num_threads=8, dataset_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset', image_type='image', channels=3, image_width=224, image_height=224, num_epochs=20, num_classes=19, batch_size=64, validation_steps=29, learning_rate=0.1, use_l2=True, weight_decay=0.0001, decay_steps=10000, shuffle_size=10000, optimizer_name='adam', history_path='/content/snapshots/', use_imagenet_weights=False, imagenet_dir='/content/resnet_imagenet_045.h5', snapshot_dir='/content/snapshots/', snapshot_steps=500, checkpoint_file='/content/snapshots/002.h5', use_checkpoint=False)
+2020-11-02 01:03:20.875774: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-11-02 01:03:20.920191: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fe67a1f08d0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-02 01:03:20.920210: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Model: "alex_net_model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              multiple                  34944     
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) multiple                  0         
+_________________________________________________________________
+re_lu (ReLU)                 multiple                  0         
+_________________________________________________________________
+batch_normalization (BatchNo multiple                  384       
+_________________________________________________________________
+conv2d_1 (Conv2D)            multiple                  614656    
+_________________________________________________________________
+batch_normalization_1 (Batch multiple                  1024      
+_________________________________________________________________
+conv2d_2 (Conv2D)            multiple                  885120    
+_________________________________________________________________
+batch_normalization_2 (Batch multiple                  1536      
+_________________________________________________________________
+conv2d_3 (Conv2D)            multiple                  1327488   
+_________________________________________________________________
+batch_normalization_3 (Batch multiple                  1536      
+_________________________________________________________________
+conv2d_4 (Conv2D)            multiple                  884992    
+_________________________________________________________________
+batch_normalization_4 (Batch multiple                  1024      
+_________________________________________________________________
+dense (Dense)                multiple                  4195328   
+_________________________________________________________________
+batch_normalization_5 (Batch multiple                  4096      
+_________________________________________________________________
+dense_1 (Dense)              multiple                  1049600   
+_________________________________________________________________
+batch_normalization_6 (Batch multiple                  4096      
+_________________________________________________________________
+dense_2 (Dense)              multiple                  19475     
+=================================================================
+Total params: 9,025,299
+Trainable params: 9,018,451
+Non-trainable params: 6,848
+_________________________________________________________________
+{'colab_alexnet_adam': [0, 27, 0, 0, 35, 0, 44, 0, 26, 20, 0, 0, 65, 0, 23, 0, 0, 0, 0]}
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020192702_alexnet_model/01112020192702_alexnet_model_history
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020192702_alexnet_model/alexnet_model
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020192702_alexnet_model/content/config_colab_alexnet_sgd.yml
+Config(FILE_PATH=PosixPath('/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/config.yml'), basepath_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/', use_multithreads=True, num_threads=8, dataset_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset', image_type='image', channels=3, image_width=224, image_height=224, num_epochs=20, num_classes=19, batch_size=64, validation_steps=29, learning_rate=0.1, use_l2=True, weight_decay=0.0001, decay_steps=10000, shuffle_size=10000, optimizer_name='sgd', history_path='/content/snapshots/', use_imagenet_weights=False, imagenet_dir='/content/resnet_imagenet_045.h5', snapshot_dir='/content/snapshots/', snapshot_steps=500, checkpoint_file='/content/snapshots/002.h5', use_checkpoint=False)
+Model: "alex_net_model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              multiple                  34944     
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) multiple                  0         
+_________________________________________________________________
+re_lu (ReLU)                 multiple                  0         
+_________________________________________________________________
+batch_normalization (BatchNo multiple                  384       
+_________________________________________________________________
+conv2d_1 (Conv2D)            multiple                  614656    
+_________________________________________________________________
+batch_normalization_1 (Batch multiple                  1024      
+_________________________________________________________________
+conv2d_2 (Conv2D)            multiple                  885120    
+_________________________________________________________________
+batch_normalization_2 (Batch multiple                  1536      
+_________________________________________________________________
+conv2d_3 (Conv2D)            multiple                  1327488   
+_________________________________________________________________
+batch_normalization_3 (Batch multiple                  1536      
+_________________________________________________________________
+conv2d_4 (Conv2D)            multiple                  884992    
+_________________________________________________________________
+batch_normalization_4 (Batch multiple                  1024      
+_________________________________________________________________
+dense (Dense)                multiple                  4195328   
+_________________________________________________________________
+batch_normalization_5 (Batch multiple                  4096      
+_________________________________________________________________
+dense_1 (Dense)              multiple                  1049600   
+_________________________________________________________________
+batch_normalization_6 (Batch multiple                  4096      
+_________________________________________________________________
+dense_2 (Dense)              multiple                  19475     
+=================================================================
+Total params: 9,025,299
+Trainable params: 9,018,451
+Non-trainable params: 6,848
+_________________________________________________________________
+{'colab_alexnet_adam': [0, 27, 0, 0, 35, 0, 44, 0, 26, 20, 0, 0, 65, 0, 23, 0, 0, 0, 0], 'colab_alexnet_sgd': [52, 4, 12, 35, 29, 28, 44, 54, 19, 41, 7, 1, 41, 5, 40, 15, 76, 15, 11]}
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020203807_resnet_model/01112020203807_resnet_model_history
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020203807_resnet_model/resnet_model
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020203807_resnet_model/content/config_colab_resnet_sgd.yml
+Config(FILE_PATH=PosixPath('/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/config.yml'), basepath_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/', use_multithreads=True, num_threads=8, dataset_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset', image_type='image', channels=3, image_width=224, image_height=224, num_epochs=20, num_classes=19, batch_size=64, validation_steps=29, learning_rate=0.1, use_l2=True, weight_decay=0.0001, decay_steps=10000, shuffle_size=10000, optimizer_name='sgd', history_path='/content/snapshots/', use_imagenet_weights=False, imagenet_dir='/content/resnet_imagenet_045.h5', snapshot_dir='/content/snapshots/', snapshot_steps=500, checkpoint_file='/content/snapshots/002.h5', use_checkpoint=False)
+Model: "res_net"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+backbone (ResNetBackbone)    multiple                  21298112  
+_________________________________________________________________
+global_average_pooling2d (Gl multiple                  0         
+_________________________________________________________________
+classifier (Dense)           multiple                  9747      
+=================================================================
+Total params: 21,307,859
+Trainable params: 21,292,627
+Non-trainable params: 15,232
+_________________________________________________________________
+{'colab_alexnet_adam': [0, 27, 0, 0, 35, 0, 44, 0, 26, 20, 0, 0, 65, 0, 23, 0, 0, 0, 0], 'colab_alexnet_sgd': [52, 4, 12, 35, 29, 28, 44, 54, 19, 41, 7, 1, 41, 5, 40, 15, 76, 15, 11], 'colab_resnet_sgd': [66, 16, 13, 35, 15, 18, 24, 48, 73, 64, 5, 2, 29, 5, 23, 59, 45, 44, 45]}
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020215156_resnet_model/01112020215156_resnet_model_history
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020215156_resnet_model/resnet_model
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020215156_resnet_model/content/config_colab_resnet_adam.yml
+Config(FILE_PATH=PosixPath('/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/config.yml'), basepath_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/', use_multithreads=True, num_threads=8, dataset_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset', image_type='image', channels=3, image_width=224, image_height=224, num_epochs=20, num_classes=19, batch_size=64, validation_steps=29, learning_rate=0.1, use_l2=True, weight_decay=0.0001, decay_steps=10000, shuffle_size=10000, optimizer_name='adam', history_path='/content/snapshots/', use_imagenet_weights=False, imagenet_dir='/content/resnet_imagenet_045.h5', snapshot_dir='/content/snapshots/', snapshot_steps=500, checkpoint_file='/content/snapshots/002.h5', use_checkpoint=False)
+Model: "res_net"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+backbone (ResNetBackbone)    multiple                  21298112  
+_________________________________________________________________
+global_average_pooling2d (Gl multiple                  0         
+_________________________________________________________________
+classifier (Dense)           multiple                  9747      
+=================================================================
+Total params: 21,307,859
+Trainable params: 21,292,627
+Non-trainable params: 15,232
+_________________________________________________________________
+{'colab_alexnet_adam': [0, 27, 0, 0, 35, 0, 44, 0, 26, 20, 0, 0, 65, 0, 23, 0, 0, 0, 0], 'colab_alexnet_sgd': [52, 4, 12, 35, 29, 28, 44, 54, 19, 41, 7, 1, 41, 5, 40, 15, 76, 15, 11], 'colab_resnet_sgd': [66, 16, 13, 35, 15, 18, 24, 48, 73, 64, 5, 2, 29, 5, 23, 59, 45, 44, 45], 'colab_resnet_adam': [57, 41, 12, 56, 49, 44, 11, 64, 59, 66, 14, 9, 32, 3, 38, 29, 54, 16, 31]}
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020225843_resnet_model/01112020225843_resnet_model_history
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020225843_resnet_model/resnet_model
+/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/experiments/01112020225843_resnet_model/content/config_colab_resnet_adam_imagenet_v2.yml
+Config(FILE_PATH=PosixPath('/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/config.yml'), basepath_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/', use_multithreads=True, num_threads=8, dataset_dir='/Users/francisco/Documents/MTI/vision_por_computadora/tarea_1/dataset', image_type='image', channels=3, image_width=224, image_height=224, num_epochs=20, num_classes=19, batch_size=128, validation_steps=14, learning_rate=0.1, use_l2=True, weight_decay=0.0001, decay_steps=5000, shuffle_size=5000, optimizer_name='adam', history_path='/content/snapshots/', use_imagenet_weights=True, imagenet_dir='/content/resnet_imagenet_045.h5', snapshot_dir='/content/snapshots/', snapshot_steps=500, checkpoint_file='/content/snapshots/002.h5', use_checkpoint=False)
+Model: "res_net"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+backbone (ResNetBackbone)    multiple                  21298112  
+_________________________________________________________________
+global_average_pooling2d (Gl multiple                  0         
+_________________________________________________________________
+classifier (Dense)           multiple                  9747      
+=================================================================
+Total params: 21,307,859
+Trainable params: 21,292,627
+Non-trainable params: 15,232
+_________________________________________________________________
+{'colab_alexnet_adam': [0, 27, 0, 0, 35, 0, 44, 0, 26, 20, 0, 0, 65, 0, 23, 0, 0, 0, 0], 'colab_alexnet_sgd': [52, 4, 12, 35, 29, 28, 44, 54, 19, 41, 7, 1, 41, 5, 40, 15, 76, 15, 11], 'colab_resnet_sgd': [66, 16, 13, 35, 15, 18, 24, 48, 73, 64, 5, 2, 29, 5, 23, 59, 45, 44, 45], 'colab_resnet_adam': [57, 41, 12, 56, 49, 44, 11, 64, 59, 66, 14, 9, 32, 3, 38, 29, 54, 16, 31], 'colab_resnet_adam_imagenet_v2': [100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
