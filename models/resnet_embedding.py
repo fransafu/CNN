@@ -6,7 +6,6 @@
 """
 import tensorflow as tf
 
-
 # a conv 3x3
 def conv3x3(channels, stride = 1, **kwargs):
     return tf.keras.layers.Conv2D(channels, (3,3), 
@@ -204,32 +203,30 @@ class ResNetBackbone(tf.keras.Model):
         x = self.bn_last(x)                
         x = tf.keras.activations.relu(x)  
         return x
-    
-class ResNet(tf.keras.Model):
-    """ 
-    ResNet model 
-    e.g.    
-    block_sizes: it is the number of residual components for each block e.g  [2,2,2] for 3 blocks 
+
+class ResNetEmbedding(tf.keras.Model):
+    """
+    ResNetEmbedding model
+    e.g.
+    block_sizes: it is the number of residual components for each block e.g  [2,2,2] for 3 blocks
     filters : it is the number of channels within each block [32,64,128]
     number_of_classes: The number of classes of the underlying problem
     use_bottleneck: Is's true when bottlenect blocks are used.
     se_factor : reduction factor in  SE module, 0 if SE is not used
-    """        
-    
-    def __init__(self, block_sizes, filters, number_of_classes, use_bottleneck = False, se_factor = 0, **kwargs) :
-        super(ResNet, self).__init__(**kwargs)
-        self.backbone = ResNetBackbone(block_sizes, filters, use_bottleneck, se_factor, name = 'backbone')                            
-        self.avg_pool = tf.keras.layers.GlobalAveragePooling2D()                     
-        self.classifier = tf.keras.layers.Dense(number_of_classes, name='classifier')
-        
+    """
+
+    def __init__(self, block_sizes, filters, number_of_classes, use_bottleneck=False, se_factor=0, **kwargs):
+        super(ResNetEmbedding, self).__init__(**kwargs)
+        self.backbone = ResNetBackbone(block_sizes, filters, use_bottleneck, se_factor, name='backbone')
+        self.avg_pool = tf.keras.layers.GlobalAveragePooling2D()
+
     def call(self, inputs, training):
         x = inputs
-        x = self.backbone(x, training)    
-        x = self.avg_pool(x)                
-        x = tf.keras.layers.Flatten()(x)                        
-        x = self.classifier(x)
+        x = self.backbone(x, training)
+        x = self.avg_pool(x)
+        x = tf.keras.layers.Flatten()(x)
         return x
-    
+
 
 class SiameseNet(tf.keras.Model):
     
