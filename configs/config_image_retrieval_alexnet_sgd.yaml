@@ -1,0 +1,38 @@
+# General
+basepath_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_2
+use_multithreads: True
+num_threads: 6
+
+# Dataset
+dataset_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_2/dataset
+
+# Images description
+image_type: 'image'
+channels: 3
+image_width: 224
+image_height: 224
+
+# Model
+num_epochs: 20
+num_classes: 19
+batch_size: 64
+validation_steps: 29 # (dataset_test // batch_size)
+use_imagenet_weights: False
+imagenet_dir: /content/resnet_imagenet_045.h5
+
+learning_rate: 0.1
+use_l2: True
+weight_decay: 1e-4
+decay_steps: 10000 # (dataset_train / batch_size) * epoch
+shuffle_size: 10000
+optimizer_name: 'sgd'
+history_path: /content/snapshots/
+
+# Load pre-trained weights
+pretrained_weights: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_2/experiments/01112020192702_alexnet_model/colab_alexnet_sgd.h5
+
+# Snapshot
+use_checkpoint: False
+snapshot_dir: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_2/snapshots/
+snapshot_steps: 500
+checkpoint_file: /Users/francisco/Documents/MTI/vision_por_computadora/tarea_2/snapshots/snap_snap_1
