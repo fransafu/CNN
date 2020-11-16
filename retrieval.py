@@ -86,7 +86,7 @@ def main():
     model.compile(optimizer=opt, loss=losses.crossentropy_loss)
 
     # Load pre-trained weights
-    if config.weights_path: # Check if not empty in the config file
+    if config.pretrained_weights: # Check if not empty in the config file
         model.load_weights(config.pretrained_weights, by_name=True, skip_mismatch=True)
 
     # Load the pre-generated embeddings
