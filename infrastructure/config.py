@@ -37,6 +37,9 @@ class Config(YamlDataClassConfig):
     use_imagenet_weights: bool = None
     imagenet_dir: str = None
 
+    # Load pre-trained weights
+    pretrained_weights: str = None
+
     # Snapshot
     snapshot_dir: str = None
     snapshot_steps: int = None
