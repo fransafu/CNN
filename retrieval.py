@@ -90,7 +90,7 @@ def main():
         model.load_weights(config.pretrained_weights, by_name=True, skip_mismatch=True)
 
     # Load the pre-generated embeddings
-    embeddings_dataset = np.fromfile("embeddings_{}.npy".format(model_name),dtype=np.float32).reshape([-1,1024])
+    embeddings_dataset = np.fromfile("embeddings_{}.npy".format(model_name),dtype=np.float32).reshape([-1,512])
 
     result = []
     for i in range(len(test_filenames)):
@@ -116,13 +116,13 @@ def main():
 
         # Store the results (class_target, top10 predicts, labels)
         class_to_search = int(test_labels[i])
-        top10_idx_mejores = candidatos[:10]
-        top10_labels_mejores = [train_labels[k] for k in candidatos[:10]]
+        # top10_idx_mejores = candidatos[:10]
+        labels_mejores = [train_labels[k] for k in candidatos]
         result.append({
             'class_to_search': class_to_search,
             'filename': filename,
-            'top10_search': '|'.join([str(k) for k in top10_labels_mejores]),
-            'top10_idx_mejores': '|'.join([str(k) for k in top10_idx_mejores])
+            'top10_search': '|'.join([str(k) for k in labels_mejores]),
+            'top10_idx_mejores': '|'.join([str(k) for k in candidatos])
         })
 
     # Save the results into csv file
